@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even or Odd Checker</title>
+    <style>
+        .container {
+            background-color: rgb(191, 55, 9);
+            width: 500px;
+            height: 250px;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 150px;
+            padding: 20px;
+            text-align: center;
+        }
+        .input-field {
+            width: 95%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+        .btn {
+            border-radius: 5px;
+            height: 40px;
+            width: 120px;
+            cursor: pointer;
+            margin-top: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .btn:hover {
+            background-color: rgba(128, 68, 0, 0.7);
+            color: white;
+        }
+        .btn.loading {
+            cursor: not-allowed;
+            background-color: #aaa;
+            color: transparent;
+        }
+        .btn.loading::after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 3px solid white;
+            border-top-color: transparent;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: blanchedalmond;">Check Even or Odd</h2>
+        <input type="number" id="textf1" class="input-field" placeholder="Enter a number">
+        <br><br>
+        <button class="btn" id="submitBtn" onclick="checkEvenOdd()">Submit</button>
+    </div>
+
+    <script>
+        function checkEvenOdd() {
+            let inputField = document.getElementById("textf1");
+            let submitBtn = document.getElementById("submitBtn");
+            let value = parseInt(inputField.value);
+
+            if (isNaN(value)) {
+                alert("Please enter a valid number");
+                return;
+            }
+
+            // Add loading effect
+            submitBtn.classList.add("loading");
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                submitBtn.classList.remove("loading");
+                submitBtn.disabled = false;
+
+                if (value % 2 === 0) {
+                    alert("The number is Even");
+                } else {
+                    alert("The number is Odd");
+                }
+            }, 2000); // Simulate delay for 2 seconds
+        }
+    </script>
+</body>
+</html>

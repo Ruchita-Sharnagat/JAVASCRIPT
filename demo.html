@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add{
+           margin-left: 10px;
+           
+            
+        }
+        button{
+            border-radius: 5px;
+            height: 30px;
+            margin-left: 30px;
+            cursor: pointer;
+            margin-top:10px ;
+            
+        }
+        button:hover{
+            background-color: rgb(128, 0, 75);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="start" style="background-color: rgb(128, 0, 75); width: 500px; height: 250px;margin: auto; border-radius: 10px; margin-top: 150px;">
+        
+       <div class="headings">
+        <h2 style="text-align: center; padding-top: 5px; color: blanchedalmond;">Calculation</h2>
+       </div>
+       <div class="add">
+        <input type="number" id="textf1" style="width:95%; height: 30px; border-radius: 5px;"  onchange="add(this)"><br><br>
+        <input type="number" id="textf2" style="width: 95%; height: 30px;border-radius: 5px;" onchange="sub(this)">
+    </div><br>
+    <div class="total">
+        <button onclick="myfunction()">Addition</button>
+        <button onclick="mysubfunction()">Substraction</button>
+        <button onclick="mymulfunction()">Multiplication</button>
+        <button onclick="mydivfunction()">Division</button>
+        <button onclick="mymodulefunction()">Modules</button>
+        <button onclick="myexponationfunction()">Exponation</button>
+        <button onclick="mytotal()">Total</button>
+
+
+
+    </div>
+    </div>
+    <script>
+        let x,y
+        function add(parameter){
+          x=parameter.value
+          console.log("add x",x)
+        }
+        function sub(para){
+         y=para.value
+         console.log("sub y",y)
+        }
+        function myfunction(){
+            if(!x){
+                alert("Please Enter the first Number")
+            }
+            else if(!y){
+                alert("Please Enter the second Number")
+            }
+            else{
+                    let z= Number(x)+Number(y)
+                    alert(z)
+        }
+    }
+        function mysubfunction(){
+            if(!x){
+                alert("Please Enter the first Number")
+            }
+            else if(!y){
+                alert("Please Enter the second Number")
+            }
+            else{
+                    let z= Number(x)-Number(y)
+                    alert(z)
+        }
+        }
+        function mymulfunction(){
+            if(!x){
+                alert("Please Enter the first Number")
+            }
+            else if(!y){
+                alert("Please Enter the second Number")
+            }
+            else{
+                    let z= Number(x)*Number(y)
+                    alert(z)
+        }
+        }
+        function mydivfunction(){
+            if(!x){
+                alert("Please Enter the first Number")
+            }
+            else if(!y){
+                alert("Please Enter the second Number")
+            }
+            else{
+                    let z= Number(x)/Number(y)
+                    alert(z)
+        }
+        }
+        function mymodulefunction(){
+            if(!x){
+                alert("Please Enter the first Number")
+            }
+            else if(!y){
+                alert("Please Enter the second Number")
+            }
+            else{
+                    let z= Number(x)%Number(y)
+                    alert(z)
+        }
+        }
+        function myexponationfunction(){
+            if(!x){
+                alert("Please Enter the first Number")
+            }
+            else if(!y){
+                alert("Please Enter the second Number")
+            }
+            else{
+                    let z= Number(x)**Number(y)
+                    alert(z)
+        }
+        }
+        function mytotal(){
+            let a= Number(x)+Number(y)
+            let b= Number(x)-Number(y)
+            let c= Number(x)*Number(y)
+            let d= Number(x)/Number(y)
+            let e= Number(x)%Number(y)
+            let f= Number(x)**Number(y)
+            alert(`Addition ${a}\n Substraction ${b}\n Multiplication ${c}\n Division ${d} \n Modules ${e}\n Exponation ${f}`)
+        }
+        // function myfunction(){
+           
+        //         let z= Number(x)+Number(y)
+        //   alert(z)
+        //     }
+    
+
+    
+        
+        
+
+
+        
+    </script>
+    </body>
+    </html>

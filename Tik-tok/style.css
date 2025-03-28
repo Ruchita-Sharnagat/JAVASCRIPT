@@ -1,0 +1,207 @@
+/* 🎨 Stylish Animated Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff6a88);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🔥 Moving Gradient Animation */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff00ff, #ff8800, #00ffcc, #ff0077, #ff00ff);
+    background-size: 400% 400%;
+    animation: moveGradient 8s infinite linear alternate;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* 🎥 Gradient Animation */
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ✨ Floating Neon Dots Effect */
+body::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+    box-shadow: 0 0 50px rgba(255,255,255,0.3);
+    animation: floating 6s infinite ease-in-out alternate;
+}
+
+/* 🌟 Floating Effect */
+@keyframes floating {
+    0% { transform: translateY(0px); opacity: 0.8; }
+    100% { transform: translateY(30px); opacity: 1; }
+}
+
+/* 📦 Game Container */
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* 🎮 Game Box */
+.game-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🎯 Title & Subtext */
+.title {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/* 🟠 Tap Button */
+button {
+    background: linear-gradient(135deg, #ff4b5c, #ff1e42);
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px 0;
+    box-shadow: 0 0 15px rgba(255, 75, 92, 0.5);
+}
+
+/* 🟢 Button Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #ff1e42, #ff0077);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 30, 66, 0.8);
+}
+
+/* 🔄 Restart Button */
+#restartButton {
+    background: linear-gradient(135deg, #1e90ff, #0077ff);
+    display: none;
+}
+
+/* ✨ Button Animation */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 75, 92, 0.5); }
+    50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 75, 92, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 75, 92, 0.5); }
+}
+
+#tapButton {
+    animation: pulse 1.5s infinite;
+}
+
+/* ✨ Floating Neon Dots Effect */
+body::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    top: 10%;
+    left: 20%;
+    box-shadow: 0 0 50px rgba(255,255,255,0.3);
+    animation: floating 6s infinite ease-in-out alternate;
+}
+
+/* 🌟 Floating Effect */
+@keyframes floating {
+    0% { transform: translateY(0px); opacity: 0.8; }
+    100% { transform: translateY(30px); opacity: 1; }
+}
+
+/* 📦 Game Container */
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+/* 🎮 Game Box */
+.game-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🎯 Title & Subtext */
+.title {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+/* 🟠 Tap Button */
+button {
+    background: linear-gradient(135deg, #ff4b5c, #ff1e42);
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px 0;
+    box-shadow: 0 0 15px rgba(255, 75, 92, 0.5);
+}
+
+/* 🟢 Button Hover Effect */
+button:hover {
+    background: linear-gradient(135deg, #ff1e42, #ff0077);
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 30, 66, 0.8);
+}
+
+/* 🔄 Restart Button */
+#restartButton {
+    background: linear-gradient(135deg, #1e90ff, #0077ff);
+    display: none;
+}
+
+/* ✨ Button Animation */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 75, 92, 0.5); }
+    50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 75, 92, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 75, 92, 0.5); }
+}
+
+#tapButton {
+    animation: pulse 1.5s infinite;
+}

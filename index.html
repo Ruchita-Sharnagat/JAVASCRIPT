@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add{
+           margin-left: 10px;
+           
+            
+        }
+        button{
+            border-radius: 5px;
+            height: 30px;
+            margin-left: 30px;
+            cursor: pointer;
+            
+        }
+        button:hover{
+            background-color: rgb(128, 0, 75);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="start" style="background-color: rgb(128, 0, 75); width: 500px; height: 200px;margin: auto; border-radius: 10px; margin-top: 150px;">
+        
+       <div class="headings">
+        <h2 style="text-align: center; padding-top: 5px; color: blanchedalmond;">Addition of two Number</h2>
+       </div>
+       <div class="add">
+        <input type="number" id="textf1" style="width:95%; height: 30px; border-radius: 5px;"  value = 'v'><br><br>
+        <input type="number" id="textf2" style="width: 95%; height: 30px;border-radius: 5px;">
+    </div><br>
+    <div class="total">
+        <button onclick="myfunction()">Addition</button>
+        <button onclick="mysubfunction()">Substraction</button>
+        <button onclick="mymulfunction()">Multiplication</button>
+        <button onclick="mydivfunction()">Division</button>
+
+
+    </div>
+    </div>
+    <script>
+        function myfunction(){
+            var fnum=document.getElementById("textf1").value;
+            var snum=document.getElementById("textf2").value;
+            var total = Number(fnum)+Number(snum);
+            alert(total);
+        }
+        function mysubfunction(){
+            var fnum=document.getElementById("textf1").value;
+            var snum=document.getElementById("textf2").value;
+            var total = Number(fnum)-Number(snum);
+            alert(total);
+        }
+        function mymulfunction(){
+            var fnum=document.getElementById("textf1").value;
+            var snum=document.getElementById("textf2").value;
+            var total = Number(fnum)*Number(snum);
+            alert(total);
+        }
+        function mydivfunction(){
+            var fnum=document.getElementById("textf1").value;
+            var snum=document.getElementById("textf2").value;
+            var total = Number(fnum)/Number(snum);
+            alert(total);
+        }
+       
+        
+        
+
+       </script>
+
+
+
+
+
+
+
+
+
+
+    <!-- <h1>Addition of two Number</h1>
+   <input type="number" id="textf1" >
+   <input type="number" id="textf2"> -->
+   <!-- <button onclick="myfunction()">Addition</button> -->
+
+
+
+
+   <!-- <script>
+    function myfunction(){
+        var fnum=document.getElementById("textf1").value;
+        var snum=document.getElementById("textf2").value;
+        var total = Number(fnum)+Number(snum);
+        alert(total);
+    }
+   </script>
+    -->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1" onkeydown="return restrictInput(event)">
+<input type="number" id="num2" onkeydown="return restrictInput(event)">
+<button onclick="restrictInput(event)">click</button>
+<script>
+    function restrictInput(event) {
+        var fname =document.getElementById("num1").value;
+        var sname = document.getElementById("num2").value;
+        var total= Number (fname) + Number (sname);
+        alert(total);
+
+        if (event.key === "e" || event.key === "E" || event.key === "+" || event.key === "-") {
+            event.preventDefault(); 
+        
+        }
+        // var fname =document.getElementById("num1").value;
+        // var sname = document.getElementById("num2").value;
+        // var total= Number (fname) + Number (sname);
+        // alert(total);
+    }
+</script>
+
+</body>
+</html>

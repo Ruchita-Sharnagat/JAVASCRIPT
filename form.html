@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>Document</title>
+
+  </style>
+</head>
+
+<body>
+  <div class="background_">
+
+    <section class="container">
+      <header> Student Registration Form</header>
+      <form class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" required onchange="sub1(this)">
+        </div>
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" required onchange="sub2(this)">
+        </div>
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required onchange="sub3(this)">
+          </div>
+          <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" required onchange="sub4(this)">
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked onchange="sub13(this)">
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" onchange="sub14(this)">
+              <label for="check-female">Female</label>
+            </div>
+
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter street address" required onchange="sub5(this)">
+
+          <div>
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>Japan</option>
+                <option>India</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your city" required onchange="sub6(this)">
+          </div>
+        </div><br>
+        <div class="select-checkbox">
+          <label>Subject</label><br><BR>
+          <input type="checkbox" id="book1" name="vehicle1" onchange="sub7(this)">
+          <label for="Subject1"> Mathematics</label>
+          <input type="checkbox" id="book2" name="vehicle2" onchange="sub8(this)">
+          <label for="Subject2"> Chemistry</label>
+          <input type="checkbox" id="book3" name="vehicle3" onchange="sub9(this)">
+          <label for="Subject4"> Physics</label>
+          <input type="checkbox" id="book4" name="vehicle3" onchange="sub10(this)">
+          <label for="Subject5"> Biology</label>
+          <input type="checkbox" id="book5" name="vehicle3" onchange="sub11(this)">
+          <label for="Subject6"> English</label>
+          <input type="checkbox" id="book" name="vehicle3" onchange="sub12(this)">
+          <label for="Subject6"> Marathi</label>
+
+        </div>
+
+        <button onclick="myformsubmit()">Submit</button>
+      </form>
+    </section>
+
+  </div>
+  <script>
+    let name, Email, phoneNumber, Birth, Gender, female, male, city,Math,physics,chemistry,biology,english,marathi
+    function sub1(Enter) {
+      name = Enter.value
+      
+    }
+    function sub2(Enter) {
+      Email = Enter.value
+      
+    }
+    function sub3(Enter) {
+      phoneNumber = Enter.value
+      
+    }
+    function sub4(Enter) {
+      Birth = Enter.value
+      
+    }
+    function sub13(Enter) {
+      Gender = Enter.value
+      
+    }
+    function sub14(Enter) {
+      female = Enter.value
+      
+    }
+    function sub5(Enter) {
+      male = Enter.value
+      
+    }
+    function sub6(Enter) {
+      city = Enter.value
+      
+    }
+    function sub7(Enter) {
+      Math = Enter.value
+      
+    }
+    function sub8(Enter) {
+      physics = Enter.value
+      
+    }
+    function sub9(Enter) {
+      chemistry = Enter.value
+      
+    }
+    function sub10(Enter) {
+      biology = Enter.value
+      
+    }
+    function sub11(Enter) {
+      english = Enter.value
+     
+    }
+    function sub12(Enter) {
+      marathi = Enter.value
+      
+    }
+    
+    function myformsubmit() {
+
+      alert(`${name}\n ${Email}\n${phoneNumber} \n${Birth} \n${Gender} \n${female}\n ${male} \n${city} \n${Math}\n${physics}\n${chemistry}\n${biology}\n${english}\n${marathi}`)
+    }
+
+
+  </script>
+
+</body>
+
+</html>

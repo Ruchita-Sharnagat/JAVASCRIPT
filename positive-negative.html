@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .add{
+           margin-left: 10px;
+           
+            
+        }
+        button{
+            border-radius: 5px;
+            height: 30px;
+            margin-left: 180px;
+            cursor: pointer;
+            width: 100px;
+            /* margin: auto; */
+            
+        }
+        button:hover{
+            background-color: rgba(128, 68, 0, 0.312);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="start" style="background-color: rgb(191, 55, 9); width: 500px; height: 250px;margin: auto; border-radius: 10px; margin-top: 150px;">
+        
+       <div class="headings">
+        <h2 style="text-align: center; padding-top: 5px; color: blanchedalmond;">Calculator</h2>
+       </div>
+       <div class="add">
+        <input type="number" id="textf1" style="width:95%; height: 30px; border-radius: 5px;" onchange="firstlarge(this)" placeholder="Enter Your First Value"><br><br>
+        
+    <button onclick="myvalue()">Submit</button>
+    <script>
+        let even
+        function firstlarge(para){
+            even=para.value
+        }
+        
+        function myvalue(){
+            if(even>0){
+                alert("value is positive")
+                
+
+            }
+            else if(even<0)
+            alert("value is negative")
+        else if(even==0){
+            alert("value is zero")
+        }
+       
+        
+        else{
+            alert("value is not declare ")
+        }
+        }
+        
+
+    </script>
+</body>
+</html>
