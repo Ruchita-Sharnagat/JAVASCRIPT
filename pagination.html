@@ -1,0 +1,136 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Pagination Example</title>
+</head>
+<body>
+  <div id="items"></div>
+  <div id="pagination"></div>
+
+  <script>
+    const data = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`);
+    const itemsPerPage = 10;
+    let currentPage = 1;
+
+    function displayItems(items, page) {
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const paginatedItems = items.slice(start, end);
+
+      document.getElementById('items').innerHTML = paginatedItems
+        .map(item => `<div>${item}</div>`)
+        .join('');
+    }
+
+    function setupPagination(items) {
+      const pageCount = Math.ceil(items.length / itemsPerPage);
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = '';
+
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement('button');
+        btn.innerText = i;
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          displayItems(items, currentPage);
+        });
+        pagination.appendChild(btn);
+      }
+    }
+
+    // Initialize
+    displayItems(data, currentPage);
+    setupPagination(data);
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Stylish Pagination</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    .item {
+      background: #fff;
+      border: 1px solid #ddd;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .pagination {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .pagination button {
+      margin: 0 5px;
+      padding: 8px 15px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .pagination button:hover {
+      background-color: #0056b3;
+    }
+    .pagination .active {
+      background-color: #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📄 Paginated List</h2>
+  <div id="items-container"></div>
+  <div class="pagination" id="pagination-controls"></div>
+
+  <script>
+    const data = Array.from({ length: 50 }, (_, i) => `Item ${i + 1}`);
+    const itemsPerPage = 10;
+    let currentPage = 1;
+
+    function renderItems() {
+      const start = (currentPage - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      const currentItems = data.slice(start, end);
+
+      document.getElementById("items-container").innerHTML = currentItems
+        .map(item => `<div class="item">${item}</div>`)
+        .join("");
+    }
+
+    function renderPagination() {
+      const pageCount = Math.ceil(data.length / itemsPerPage);
+      const container = document.getElementById("pagination-controls");
+      container.innerHTML = "";
+
+      for (let i = 1; i <= pageCount; i++) {
+        const btn = document.createElement("button");
+        btn.innerText = i;
+        if (i === currentPage) btn.classList.add("active");
+
+        btn.addEventListener("click", () => {
+          currentPage = i;
+          renderItems();
+          renderPagination();
+        });
+
+        container.appendChild(btn);
+      }
+    }
+
+    // Initial load
+    renderItems();
+    renderPagination();
+  </script>
+
+</body>
+</html>

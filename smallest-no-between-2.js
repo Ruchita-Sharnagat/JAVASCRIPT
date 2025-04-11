@@ -12,4 +12,4 @@ function findSmallNo(firstNo, secondNo) {
     }
 }
 
-findSmallNo(12,23)
+findSmallNo(12, 23)
